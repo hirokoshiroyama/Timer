@@ -8,9 +8,9 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var mTimer:Timer? =null
-    private var mTimerSec =0.0
-    private var mHandler =Handler()
+    private var mTimer: Timer? = null
+    private var mTimerSec = 0.0
+    private var mHandler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,16 +28,16 @@ class MainActivity : AppCompatActivity() {
                     }
                 }, 100, 100)
             }
-                pause_button.setOnClickListener {
+            pause_button.setOnClickListener {
                 if (mTimer != null) {
                     mTimer!!.cancel()
                     mTimer = null
                 }
             }
         }
-        reset_button.setOnClickListener{
-                mTimerSec = 0.0
-                timer.text = String.format("%.1f",mTimerSec)
+        reset_button.setOnClickListener {
+            mTimerSec = 0.0
+            timer.text = String.format("%.1f", mTimerSec)
         }
 
     }
